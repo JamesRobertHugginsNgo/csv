@@ -1,0 +1,55 @@
+/* BOILERPLATE: https://raw.githubusercontent.com/JamesRobertHugginsNgo/field/1.1.0/src/style.css */
+/* BOILERPLATE: https://github.com/JamesRobertHugginsNgo/field/blob/1.1.0/src/style.css */
+
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+
+	& .field-label {
+		font-weight: bold;
+
+		&>span {
+			font-weight: normal;
+		}
+
+		&:is(legend) {
+			margin-bottom: 0.25rem;
+			padding: 0;
+		}
+	}
+
+	& .field-help-text {
+		color: #777777;
+		font-size: 0.875em;
+	}
+
+	& .field-error-text {
+		display: none;
+
+		&.field-error-text-with-icon {
+			gap: 0.25rem;
+		}
+	}
+
+	&.field-error.show-field-error {
+		& .field-label {
+			color: darkred;
+		}
+
+		& .field-error-text {
+			color: darkred;
+			display: block;
+
+			&.field-error-text-with-icon {
+				display: flex;
+			}
+		}
+	}
+
+	&:is(fieldset) {
+		border: 0;
+		padding: 0;
+	}
+}

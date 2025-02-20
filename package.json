@@ -1,0 +1,23 @@
+{
+  "name": "csv",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": {
+    "name": "James Robert Huggins Ngo",
+    "email": "jamesroberthugginsngo@gmail.com",
+    "url": "https://jamesroberthugginsngo.github.io"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./csv-array-to-json.js": "./src/csv-array-to-json.js",
+    "./csv-array-to-string.js": "./src/csv-array-to-string.js",
+    "./csv-json-to-array": "./src/csv-json-to-array.js",
+    "./csv-string-to-array": "./src/csv-string-to-array.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
