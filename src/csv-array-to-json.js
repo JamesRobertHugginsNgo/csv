@@ -1,3 +1,5 @@
+/* BOILERPLATE */
+
 export default function csvArrayToJson(rows) {
 	const result = [];
 
