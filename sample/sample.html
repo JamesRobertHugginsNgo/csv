@@ -17,18 +17,15 @@
 
 	<script type="module">
 		import * as Csv from '../dist/csv.js';
-		import createDisplay from './create-display.js';
+		import CodeDisplay from './code-display.js';
 
-		const display = createDisplay(document.querySelector('main'));
+		const codeDisplay = new CodeDisplay(document.querySelector('main'));
 
-		let csvString;
-
-		let accept;
-		display(
+		const csvString = codeDisplay.insert(
 			'CSV String',
 			'Generate the initial "CSV" string.',
 			() => {
-				return csvString = [
+				return [
 					'Index,Customer Id,First Name,Last Name,Company,City,Country,Phone 1,Phone 2,Email,Subscription Date,Website',
 					'1,DD37Cf93aecA6Dc,Sheryl,Baxter,Rasmussen Group,East Leonard,Chile,229.077.5154,397.884.0519x718,zunigavanessa@smith.info,2020-08-24,http://www.stephenson.com/',
 					'2,1Ef7b82A4CAAD10,Preston,Lozano,Vega-Gentry,East Jimmychester,Djibouti,5153435776,686-620-1820x944,vmata@colon.com,2021-04-23,http://www.hobbs.com/',
@@ -43,38 +40,40 @@
 			}
 		);
 
-		let csvArray;
-		display(
+		const csvArray = codeDisplay.insert(
 			'CSV String To CSV Array',
 			'Takes the CSV string and transform it into a CSV array.',
-			() => {
-				return csvArray = Csv.stringToArray(csvString);
-			}
+			(csvString) => {
+				return Csv.stringToArray(csvString);
+			},
+			csvString
 		);
 
-		display(
+		codeDisplay.insert(
 			'CSV Array To CSV String',
 			'Takes the CSV array and transform it back into a CSV array.',
-			() => {
+			(csvArray) => {
 				return Csv.arrayToString(csvArray);
-			}
+			},
+			csvArray
 		);
 
-		let csvJson;
-		display(
+		const csvJson = codeDisplay.insert(
 			'CSV Array To CSV JSON',
 			'Takes the CSV array and transform it into a CSV JSON, or an array of objects. It uses the first row as the object key.',
-			() => {
-				return csvJson = Csv.arrayToJson(csvArray);
-			}
+			(csvArray) => {
+				return Csv.arrayToJson(csvArray);
+			},
+			csvArray
 		);
 
-		display(
+		codeDisplay.insert(
 			'CSV JSON To CSV Array',
 			'Takes the CSV JSON and transform it back into a CSV Array.',
-			() => {
+			(csvJson) => {
 				return Csv.jsonToArray(csvJson);
-			}
+			},
+			csvJson
 		);
 	</script>
 </body>

@@ -1,1 +1,5 @@
-export default function csvJsonToArray(json: object[]): string[][];
+export default function csvJsonToArray(
+	json: {
+		[key: string]: string;
+	}[],
+): string[][];
