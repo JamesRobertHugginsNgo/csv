@@ -2,7 +2,7 @@
 
 [![Open in Github](https://img.shields.io/badge/Open_in_GitHub-6e5494)](https://github.com/JamesRobertHugginsNgo/csv)
 [![Open in Github Page](https://img.shields.io/badge/Open_in_GitHub%20Page-4078c0)](https://jamesroberthugginsngo.github.io/csv/)
-[![Open Tag](https://img.shields.io/badge/Open_Tag-1.0.1-6cc644)](https://github.com/JamesRobertHugginsNgo/csv/tree/1.0.1)
+[![Open Tag](https://img.shields.io/badge/Open_Tag-2.0.0-6cc644)](https://github.com/JamesRobertHugginsNgo/csv/tree/2.0.0)
 
 TypeScript/JavaScript functions for transforming CSV data.
 
