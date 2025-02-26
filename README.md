@@ -19,10 +19,10 @@ TypeScript
 
 JavaScript
 
-- [csv-array-to-json.js](./src/csv-array-to-json.js) \| [raw](./src/csv-array-to-json.js?raw=1)
-- [csv-array-to-string.js](./src/csv-array-to-string.js) \| [raw](./src/csv-array-to-string.js?raw=1)
-- [csv-json-to-array.js](./src/csv-json-to-array.js) \| [raw](./src/csv-json-to-array.js?raw=1)
-- [csv-string-to-array.js](./src/csv-string-to-array.js) \| [raw](./src/csv-string-to-array.js?raw=1)
+- [csv-array-to-json.js](./dist/csv-array-to-json.js) \| [raw](./dist/csv-array-to-json.js?raw=1)
+- [csv-array-to-string.js](./dist/csv-array-to-string.js) \| [raw](./dist/csv-array-to-string.js?raw=1)
+- [csv-json-to-array.js](./dist/csv-json-to-array.js) \| [raw](./dist/csv-json-to-array.js?raw=1)
+- [csv-string-to-array.js](./dist/csv-string-to-array.js) \| [raw](./dist/csv-string-to-array.js?raw=1)
 
 ## Samples
 
