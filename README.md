@@ -6,7 +6,7 @@
 
 TypeScript/JavaScript functions for transforming CSV data.
 
-## Reusable Code
+## Reusable Codes
 
 Use the raw link to quickly download the raw source code.
 
