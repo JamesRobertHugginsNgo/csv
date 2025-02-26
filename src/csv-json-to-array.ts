@@ -1,11 +1,9 @@
-/* BOILERPLATE */
-
-export default function csvJsonToArray(json) {
-	const rows = [[]];
+export default function csvJsonToArray(json: object[]): string[][] {
+	const rows: string[][] = [[]];
 
 	const length = json.length;
 	for (let index = 1; index < length; index++) {
-		const cols = [];
+		const cols: any[] = [];
 
 		for (const key in json[index]) {
 			if (!rows[0].includes(key)) {

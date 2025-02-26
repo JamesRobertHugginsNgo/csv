@@ -1,9 +1,7 @@
-/* BOILERPLATE */
-
-export default function csvStringToArray(csv) {
-	const rows = [];
-	let cols = [];
-	let col = [];
+export default function csvStringToArray(csv: string): string[][] {
+	const rows: string[][] = [];
+	let cols: string[] = [];
+	let col: string[] = [];
 
 	const pushCols = () => {
 		cols.push(col.join('').trim());

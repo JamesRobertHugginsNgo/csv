@@ -1,6 +1,6 @@
 /* BOILERPLATE */
 
-export default function csvArrayToString(rows) {
+export default function csvArrayToString(rows: string[][]): string {
 	return rows.map((cols) => {
 		return cols.map((col) => {
 			col = col.trim().replaceAll('"', '""');
