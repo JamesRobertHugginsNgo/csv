@@ -1,8 +1,8 @@
-export default function csvJsonToArray(json: object[]): string[][] {
+export default function csvJsonToArray(json: { [key: string]: string }[]): string[][] {
 	const rows: string[][] = [[]];
 
-	const length = json.length;
-	for (let index = 1; index < length; index++) {
+	const length: number = json.length;
+	for (let index: number = 1; index < length; index++) {
 		const cols: any[] = [];
 
 		for (const key in json[index]) {

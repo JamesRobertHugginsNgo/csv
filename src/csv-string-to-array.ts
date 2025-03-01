@@ -3,21 +3,21 @@ export default function csvStringToArray(csv: string): string[][] {
 	let cols: string[] = [];
 	let col: string[] = [];
 
-	const pushCols = () => {
+	const pushCols: () => void = () => {
 		cols.push(col.join('').trim());
 		col = [];
 	}
-	const pushRows = () => {
+	const pushRows: () => void = () => {
 		pushCols();
 		rows.push(cols);
 		cols = [];
 	}
 
-	let isInQuote = false;
+	let isInQuote: boolean = false;
 
-	const length = csv.length;
-	for (let index = 0; index < length; index++) {
-		const char = csv[index];
+	const length: number = csv.length;
+	for (let index: number = 0; index < length; index++) {
+		const char: string = csv[index];
 
 		if (char == '"') {
 			isInQuote = !isInQuote;
@@ -43,7 +43,7 @@ export default function csvStringToArray(csv: string): string[][] {
 	}
 
 	pushRows();
-	const lastIndex = rows.length - 1;
+	const lastIndex: number = rows.length - 1;
 	if (lastIndex > -1 && rows[lastIndex].length === 1 && rows[lastIndex][0] === '') {
 		rows.pop();
 	}

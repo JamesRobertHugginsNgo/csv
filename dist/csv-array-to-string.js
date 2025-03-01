@@ -1,4 +1,3 @@
-/* BOILERPLATE */
 export default function csvArrayToString(rows) {
 	return rows
 		.map((cols) => {

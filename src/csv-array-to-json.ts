@@ -1,10 +1,10 @@
-export default function csvArrayToJson(rows: string[][] = []): object[] {
-	const result: object[] = [];
+export default function csvArrayToJson(rows: string[][] = []): { [key: string]: string }[] {
+	const result: { [key: string]: string }[] = [];
 
-	const length = rows.length;
-	for (let index = 1; index < length; index++) {
-		const cols = rows[index].reduce((acc, cur, idx) => {
-			const key = rows[0][idx];
+	const length: number = rows.length;
+	for (let index: number = 1; index < length; index++) {
+		const cols = rows[index].reduce((acc: { [key: string]: string }, cur: string, idx: number): { [key: string]: string } => {
+			const key: string = rows[0][idx];
 			if (key) {
 				acc[key] = cur;
 			}
